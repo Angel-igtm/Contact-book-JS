@@ -1,0 +1,76 @@
+*
+    color: white
+body
+    margin: 0
+    padding: 0
+    font-size: 14px
+    font-family: Arial, Helvetica, sans-serif
+    width: 100%
+    height: 100%
+    background: url(../image/double-bubble-dark.png)
+.container
+    display: flex
+    justify-content: center
+    text-align: center
+.contacts
+    width: 100%
+    height: 100%
+    margin: 30px 0 0 0
+#myForm
+    height: 130px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+input
+    color: black
+.table
+    width: 1300px
+    height: 100%
+    background-color: #2e3838bd
+    table-layout: fixed
+    border-collapse: collapse
+    text-align: center
+    thead
+        th
+            letter-spacing: 2px
+        th:nth-child(1)
+            width: 15%
+        th:nth-child(5)
+            width: 10%
+        th:nth-child(6)
+            width: 5%
+        th:nth-child(7)
+            width: 5%
+            
+button
+    margin: 0 20px
+.add
+    padding: 6px 14px
+    border-radius: 50px
+    background: #514848d9
+    border: none
+    color: white    
+    margin: 10px 0 0 0
+.tr
+    height: 50px
+.border-top
+    height: 1px
+    background: black
+// tbody tr:nth-child(even) {
+//   background-color: #e495e4;
+// }
+tbody
+    tr
+        background: #63c242cc
+        background-image: url(../image/unnamed.png)
+        td
+            // border: 1px solid white
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5))
+    tr:nth-child(even)
+        background-color: #344b6a
+.delete
+    cursor: pointer
+.add
+    cursor: pointer
+

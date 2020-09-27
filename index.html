@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__header">
+            <h1>Contact BooK</h1>
+            <div class="container__body">
+                <form 
+                action="http://localhost:8000/contacts" 
+                method="POST"
+                id="myForm">
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="text" placeholder="Surname" name="surname">
+                    <input type="text" placeholder="@email" name="email">
+                    <input type="number" placeholder="phone number" name="phoneNum">
+                    <input type="number" placeholder="Stream" name="streamNum">
+                    <!-- <input type="submit" class="add" value="Submit"> -->
+                    <button type="submit" class="add">Submit</button>
+                </form>
+                <div class="contacts">
+                    <table class="table">
+                        <thead>
+                        <tr class="tr">
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>@email</th>
+                            <th>Phone number</th>
+                            <th>Stream</th>
+                            <th>Delete</th>
+                            <th>Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            
+                        </tbody>
+                        <tfoot>
+                            <!-- <tr>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                            </tr> -->
+                        </tfoot>
+                        <!-- <tr class="tr">
+                            <td>Zakir</td>
+                            <td>Zakirov</td>
+                            <td>@zakir@</td>
+                            <td>23123123</td>
+                            <td>9</td>
+                            <th>
+                                <button class="delete">Delete</button>
+                                <button class="edit">Edit</button>
+                            </th>
+                        </tr>
+                        <tr     class="tr">
+                            <td>sam</td>
+                            <td>sam</td>
+                            <td>sam</td>
+                            <td>sam</td>
+                            <td>9</td>
+                            <th>
+                                <button class="delete">Delete</button>
+                                <button class="edit">Edit</button>
+                            </th>
+                        </tr> -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
