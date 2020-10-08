@@ -15,9 +15,10 @@ myForm.addEventListener('submit', async function(e){
 
         phoneNum: elem.querySelector('[name="phoneNum"]').value,
 
-        streamNum: elem.querySelector('[name="streamNum"]').value
+        // streamNum: elem.querySelector('[name="streamNum"]').value
+        money: elem.querySelector('[name="money"]').value
     }
-    if(!formData.name || !formData.surname || !formData.email || !formData.phoneNum || !formData.streamNum){
+    if(!formData.name || !formData.surname || !formData.email || !formData.phoneNum || /*!formData.streamNum*/ !formData.money ){
         return alert('Заполните поля')
     }
     else{
@@ -64,12 +65,14 @@ function render(method, url){
                 tr.setAttribute('data-id', item.id)
                 tr.appendChild(hr);
                 document.querySelector('.tbody').appendChild(tr).innerHTML =
+                // <td class="data-info" data-about="streamNum">${item.streamNum}</td>
                 `
                     <td class="data-info" data-about="name">${item.name}</td>
                     <td class="data-info" data-about="surname">${item.surname}</td>
                     <td class="data-info" data-about="email">${item.email}</td>
                     <td class="data-info" data-about="phoneNum">${item.phoneNum}</td>
-                    <td class="data-info" data-about="streamNum">${item.streamNum}</td>
+                    <td class="data-info" data-about="streamNum">${item.money}</td>
+                    
                     <td>
                     <img class="delete" data-id=${item.id} src="./image/delete.png" alt="loading delete icon"/>
                     </td>
@@ -115,7 +118,8 @@ function render(method, url){
                         let data_aboutSurname = about[1].getAttribute('data-about')
                         let data_aboutEmail = about[2].getAttribute('data-about')
                         let data_aboutPhoneNum = about[3].getAttribute('data-about')
-                        let data_aboutStreamNum = about[4].getAttribute('data-about')
+                        let data_aboutMoney = about[4].getAttribute('data-about')
+                        // let data_aboutStreamNum = about[4].getAttribute('data-about')
                         let result = about
                         // console.log(result[0].innerText)
                         // console.log(text)
@@ -133,14 +137,16 @@ function render(method, url){
                                     let surname = about[1].firstChild.value
                                     let email = about[2].firstChild.value
                                     let phoneNum = about[3].firstChild.value
-                                    let streamNum = about[4].firstChild.value
+                                    // let streamNum = about[4].firstChild.value
+                                    let money = about[4].firstChild.value
                                     console.log(result)
                                     let data = {}
                                     data[data_aboutName] = name;
                                     data[data_aboutSurname] = surname;
                                     data[data_aboutEmail] = email;
                                     data[data_aboutPhoneNum] = phoneNum;
-                                    data[data_aboutStreamNum] = streamNum;
+                                    data[data_aboutMoney] = money;
+                                    // data[data_aboutStreamNum] = streamNum;
                                     console.log(data)
                                     // let result = item.firstChild.value
                                     
@@ -164,6 +170,7 @@ function render(method, url){
         getItem()
     })
 }
+
                                     // let formData = {
                                     //     name: elem.querySelector('[name="name"]').value,
                                         

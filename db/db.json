@@ -1,20 +1,13 @@
 {
   "contacts": [
     {
-      "name": "1",
-      "surname": "1",
-      "email": "samat___96@mail.ru",
-      "phoneNum": "2",
-      "streamNum": "2",
-      "id": 3
-    },
-    {
-      "name": "sa",
-      "surname": "2",
-      "email": "samat___96@mail.ru",
-      "phoneNum": "11",
-      "streamNum": "11",
-      "id": 4
+      "name": "Dean",
+      "surname": "Azimbaev",
+      "email": "dino.zavr.1412@gmail.com",
+      "phoneNum": "0000000000",
+      "money": "50",
+      "id": 1,
+      "streamNum": "50"
     }
   ]
 }
