@@ -71,7 +71,7 @@ function render(method, url){
                     <td class="data-info" data-about="surname">${item.surname}</td>
                     <td class="data-info" data-about="email">${item.email}</td>
                     <td class="data-info" data-about="phoneNum">${item.phoneNum}</td>
-                    <td class="data-info" data-about="streamNum">${item.money}</td>
+                    <td class="data-info" data-about="money">${item.money}</td>
                     
                     <td>
                     <img class="delete" data-id=${item.id} src="./image/delete.png" alt="loading delete icon"/>
@@ -125,41 +125,56 @@ function render(method, url){
                         // console.log(text)
                         e.preventDefault();
                         isTrue = !isTrue;
+                        let saveText = item.parentElement.offsetParent.childNodes[1].children[0].childNodes[15];
+                        // let saveId = item.parentElement.offsetParent.childNodes[3].firstChild.childNodes[13].children[0].getAttribute('data-id')
+                        // let saveImg = item.parentElement.offsetParent.childNodes[3].firstChild.childNodes[13].children[0].setAttribute('src', './image/save.png')
+                        // item.parentElement.offsetParent.childNodes[3].firstChild.childNodes[13].children[0].className = 'save'
+                        // item.forEach(save => {console.log(save)})
+                        item.setAttribute('src', './image/save.png');
+                        item.classList = 'save';
                         if(isTrue){
+                            // saveImg.innerHTML = `<img class="save" src="./image/save.png" alt="loading save icon"/>`
+                            saveText.innerHTML = 'Save'
                             about.forEach(item => {
                                 let text = item.innerText
-                                console.log(item)
+                                // console.log(item)
                                 item.innerHTML = `<input type="text" class="item-info" value="${text}"/>`
+                                
                             })
                         }
                         else {
-                                    let name = about[0].firstChild.value
-                                    let surname = about[1].firstChild.value
-                                    let email = about[2].firstChild.value
-                                    let phoneNum = about[3].firstChild.value
-                                    // let streamNum = about[4].firstChild.value
-                                    let money = about[4].firstChild.value
-                                    console.log(result)
-                                    let data = {}
-                                    data[data_aboutName] = name;
-                                    data[data_aboutSurname] = surname;
-                                    data[data_aboutEmail] = email;
-                                    data[data_aboutPhoneNum] = phoneNum;
-                                    data[data_aboutMoney] = money;
-                                    // data[data_aboutStreamNum] = streamNum;
-                                    console.log(data)
-                                    // let result = item.firstChild.value
-                                    
-                                    fetch(`http://localhost:3000/contacts/${id}`, {
-                                        method: "PATCH",
-                                        headers: {
-                                            "content-type": "application/json"
-                                        },
-                                        body: JSON.stringify(data)
-                                    })
-                                    
-                                    .then(response => response.json())
-                                    .then(() => render('GET',url))
+                            saveText.innerHTML = 'Edit' 
+                              
+                            // saveImg.innerHTML = `<img class="edit" src="./image/edit.png" alt="loading edit icon"/>`
+                            
+                            let name = about[0].firstChild.value
+                            let surname = about[1].firstChild.value
+                            let email = about[2].firstChild.value
+                            let phoneNum = about[3].firstChild.value
+                            // let streamNum = about[4].firstChild.value
+                            let money = about[4].firstChild.value
+                            console.log(result)
+                            let data = {}
+                            data[data_aboutName] = name;
+                            data[data_aboutSurname] = surname;
+                            data[data_aboutEmail] = email;
+                            data[data_aboutPhoneNum] = phoneNum;
+                            data[data_aboutMoney] = money;
+                            // data[data_aboutStreamNum] = streamNum;
+                            console.log(data)
+                            // let result = item.firstChild.value
+                            
+                            fetch(`http://localhost:3000/contacts/${id}`, {
+                                method: "PATCH",
+                                headers: {
+                                    "content-type": "application/json"
+                                },
+                                body: JSON.stringify(data)
+                            })
+                            
+                            .then(response => response.json())
+                            .then(() => render('GET',url))
+                            console.log(data)
                                     // render('get',url)
                         }
                         
