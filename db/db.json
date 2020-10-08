@@ -4,10 +4,28 @@
       "name": "Dean",
       "surname": "Azimbaev",
       "email": "dino.zavr.1412@gmail.com",
-      "phoneNum": "0000000000",
+      "phoneNum": "0703046302",
       "money": "50",
       "id": 1,
+      "streamNum": "502"
+    },
+    {
+      "name": "Samat",
+      "surname": "ibraimov",
+      "email": "Angeldisam@gmail.com",
+      "phoneNum": "0558407480",
+      "money": "0",
+      "id": 2,
       "streamNum": "50"
+    },
+    {
+      "name": "Saadat",
+      "surname": "Sultanalieva",
+      "email": "sultanalieva_s@auca.kg",
+      "phoneNum": "0000000000",
+      "money": "0",
+      "id": 3,
+      "streamNum": "0"
     }
   ]
 }

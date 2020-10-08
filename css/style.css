@@ -91,6 +91,10 @@ tbody tr:nth-child(even) {
   background-color: #344b6a;
 }
 
-.delete, .edit, .add {
+.delete, .edit, .add, .save {
   cursor: pointer;
+}
+
+.save {
+  width: 33px;
 }
