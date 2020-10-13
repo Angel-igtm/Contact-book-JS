@@ -26,6 +26,14 @@
       "money": "0",
       "id": 3,
       "streamNum": "0"
+    },
+    {
+      "name": "Dosya",
+      "surname": "Dosya",
+      "email": "Dosya@mail.ru",
+      "phoneNum": "231023012031",
+      "money": "100",
+      "id": 4
     }
   ]
 }
